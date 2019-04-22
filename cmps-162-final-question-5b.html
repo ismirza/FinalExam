@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/Javascript" src="script.js"></script>
+
+<body>
+
+  <h2>Constructors</h2>
+
+  <!--Provide a id here-->
+  <p id="persons"></p>
+
+  <script>
+    // Constructor function for College objects
+    function Person(first, last, grade, clas, course) {
+      this.firstName = first;
+      this.lastName = last;
+      this.grade = grade;
+      this.clas = clas;
+      this.course = course;
+    }
+
+    // Create variableobject
+    var student = new Person('Sammy', 'abdulkader', '-10', 'freshie', 'CIT162');
+
+    //Display Output
+    document.getElementById('persons').innerHTML =
+      'The student is ' + student.firstName + '' + student.lastName +
+      '. He is in ' + student.grade + ' grade. And he is a ' +
+      student.clas + ', he also takes ' + student.course;
+  </script>
+  <!-- add buttons for Change Text and Refresh Screen -->
+  <button type='button' onClick='alterText()'>Change text</button>
+  <button type='button' onClick='refresh()'>reload this thing</button>
+
+</body>
+
+</html>
